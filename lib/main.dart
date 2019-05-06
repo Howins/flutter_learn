@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'demo/listview_demo.dart';
 import 'demo/bottom_navi_bar_demo.dart';
 import 'demo/drawer_demo.dart';
+import 'demo/basic_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -71,12 +72,8 @@ class AppHome extends StatelessWidget {
         bottomNavigationBar: MyBottomNavitagionBar(),
         body: TabBarView(
           children: <Widget>[
-            MyListView(),
-            Icon(
-              Icons.change_history,
-              size: 128.0,
-              color: Colors.black26,
-            ),
+            MyListView(),//顶部栏的第一个Tab显示ListView
+            BasicDemo(),
             Icon(
               Icons.directions_bike,
               size: 128.0,
