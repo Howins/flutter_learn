@@ -4,6 +4,7 @@ import 'demo/bottom_navi_bar_demo.dart';
 import 'demo/drawer_demo.dart';
 import 'demo/basic_demo.dart';
 import 'demo/layout_demo.dart';
+import 'demo/view_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -66,6 +67,7 @@ class AppHome extends StatelessWidget {
               Tab(icon: Icon(Icons.local_florist)), //使用Icon显示每个Tab的
               Tab(icon: Icon(Icons.change_history)), //使用Icon显示每个Tab的
               Tab(icon: Icon(Icons.directions_bike)), //使用Icon显示每个Tab的
+              Tab(icon: Icon(Icons.view_quilt)), //使用Icon显示每个Tab的
             ],
           ),
         ),
@@ -76,6 +78,7 @@ class AppHome extends StatelessWidget {
             MyListView(),//顶部栏的第一个Tab显示ListView
             BasicDemo(),
             LayoutDemo(),
+            ViewDemo(),
           ],
         ),
         //body: ListViewDemo(),
