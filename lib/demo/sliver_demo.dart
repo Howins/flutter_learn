@@ -64,7 +64,7 @@ class SliverListDemo extends StatelessWidget {
             // ),
             child: Material(
               borderRadius: BorderRadius.circular(
-                  12.0), //这个是Material的参数，圆角边框(为什么应用到图片不生效了？)
+                  12.0), //这个是Material的参数，圆角边框(为什么应用到图片不生效了，本应该生效了，但是图片放上面，并不是放里面，不知道原因。)
               elevation: 14.0,
               shadowColor: Colors.green.withOpacity(0.8),
               child: Stack(
