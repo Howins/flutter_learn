@@ -5,6 +5,7 @@ import 'demo/drawer_demo.dart';
 import 'demo/basic_demo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/view_demo.dart';
+import 'demo/sliver_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
           splashColor: Colors.green[100], //设置水波纹的颜色
         ),
         home: AppHome());
+        //home: SliverDemo());
   }
 }
 
@@ -77,7 +79,7 @@ class AppHome extends StatelessWidget {
           children: <Widget>[
             MyListView(),//顶部栏的第一个Tab显示ListView
             BasicDemo(),
-            LayoutDemo(),
+            SliverDemo(),
             ViewDemo(),
           ],
         ),
