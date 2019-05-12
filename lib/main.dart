@@ -6,6 +6,7 @@ import 'demo/basic_demo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/view_demo.dart';
 import 'demo/sliver_demo.dart';
+import 'demo/route_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,16 +15,27 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false, //debug的时候不显示那个debug条的
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.yellow, //配置主题导航栏的颜色主题风格
-          highlightColor:
-              Color.fromRGBO(255, 255, 255, 0.5), //设置点击触发的高亮颜色的为白色，默认灰色，不透明度0.5
-          splashColor: Colors.green[100], //设置水波纹的颜色
-        ),
-        home: AppHome());
-        //home: SliverDemo());
+      debugShowCheckedModeBanner: false, //debug的时候不显示那个debug条的
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.yellow, //配置主题导航栏的颜色主题风格
+        highlightColor:
+            Color.fromRGBO(255, 255, 255, 0.5), //设置点击触发的高亮颜色的为白色，默认灰色，不透明度0.5
+        splashColor: Colors.green[100], //设置水波纹的颜色
+      ),
+      // home: NavigatorDemo(),
+      initialRoute: '/', //如果定义这个，不在home:定义
+      routes: {
+        //命名路由
+        '/': (context) => AppHome(),//NavigatorDemo(),
+        '/about': (context) => Page1(
+              title: 'about',
+            ),
+      },
+    );
+
+    //home: AppHome());
+    //home: SliverDemo());
   }
 }
 
@@ -77,7 +89,7 @@ class AppHome extends StatelessWidget {
         bottomNavigationBar: MyBottomNavitagionBar(),
         body: TabBarView(
           children: <Widget>[
-            MyListView(),//顶部栏的第一个Tab显示ListView
+            MyListView(), //顶部栏的第一个Tab显示ListView
             BasicDemo(),
             SliverDemo(),
             ViewDemo(),
