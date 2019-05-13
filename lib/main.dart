@@ -7,6 +7,7 @@ import 'demo/layout_demo.dart';
 import 'demo/view_demo.dart';
 import 'demo/sliver_demo.dart';
 import 'demo/route_demo.dart';
+import 'demo/form_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,13 +25,14 @@ class MyApp extends StatelessWidget {
         splashColor: Colors.green[100], //设置水波纹的颜色
       ),
       // home: NavigatorDemo(),
-      initialRoute: '/', //如果定义这个，不在home:定义
+      initialRoute: '/form', //如果定义这个，不在home:定义
       routes: {
         //命名路由
-        '/': (context) => AppHome(),//NavigatorDemo(),
+        '/': (context) => AppHome(), //NavigatorDemo(),
         '/about': (context) => Page1(
               title: 'about',
             ),
+        '/form': (context) => FormDemo(),
       },
     );
 
